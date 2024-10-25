@@ -14,3 +14,7 @@ target_link_libraries(laba2 m)
 add_executable(laba1 task1/laba2-1.c
         task1/2-1.c
         task1/2-1.h)
+add_executable(laba8 task8/laba2-8.c
+        task8/2-8.h
+        task8/2-8.c
+        task8/2-8.c)
