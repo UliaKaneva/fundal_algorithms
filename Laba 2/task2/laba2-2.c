@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include "2-2.h"
 
 
