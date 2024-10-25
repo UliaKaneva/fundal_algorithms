@@ -88,6 +88,7 @@ int save_add(char **ans, int *size, int i, char element) {
 }
 
 int sum_in_radix(int radix, char **ans, int *size, int count, ...) {
+    if (count < 0) { return 1; }
     if (radix > 36 || radix < 2) { return 1; }
     add(ans[0], size[0], 0, '0', char);
     add(ans[0], size[0], 1, '\0', char);

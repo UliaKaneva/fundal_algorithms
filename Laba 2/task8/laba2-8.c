@@ -4,7 +4,7 @@
 
 
 int main(void) {
-    int radix = 37;
+    int radix = 36;
     int count = 4;
     int size = 8;
     char *ans = (char *) malloc(size * sizeof(char));
