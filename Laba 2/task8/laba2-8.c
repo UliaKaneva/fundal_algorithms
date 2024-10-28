@@ -12,7 +12,7 @@ int main(void) {
         printf("Memory error");
         return 1;
     }
-    if (sum_in_radix(radix, &ans, &size, count, "0", "0", "0",
+    if (sum_in_radix(radix, &ans, &size, count, "0z", "0z", "01",
                      "0")) {
         free(ans);
         printf("Incorrect numbers");
