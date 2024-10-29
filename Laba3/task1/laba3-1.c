@@ -4,9 +4,9 @@
 
 
 int main(void){
-    int a = -17;
+    int a = -120;
     char ans[34];
-    if (ten_to_two(a, 5, ans)){
+    if (ten_to_two(a, 1, ans)){
         printf("Incorrect options\n");
         return 1;
     }

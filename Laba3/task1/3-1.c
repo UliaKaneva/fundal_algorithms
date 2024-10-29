@@ -1,6 +1,26 @@
 #include "3-1.h"
 
 
+#define add_1(number_s) do { \
+    long long nums = 1;\
+    while ((number_s) & nums) {\
+        (number_s) = (number_s) ^ nums;\
+        nums <<= 1;\
+    }\
+    (number_s) |= nums;\
+    } while(0)
+
+
+#define del_1(number_s) do { \
+    int nums = 1;\
+    while (!((number_s) & nums) && nums) {\
+        (number_s) = (number_s) | nums;\
+        nums <<= 1;\
+    }\
+    (number_s) = (number_s) ^ nums;    \
+}while(0)
+
+
 long long my_abs(long long number) {
     if (number & (1 << 31)) {
         long long res = 0;
@@ -35,14 +55,13 @@ int ten_to_two(int number, int r, char ans[]) {
         num <<= 1;
     }
 
-    while (number_v != 0) {
+    while (number_v >= (1 << r)) {
         n = (int) (number_v & ost);
         number_v >>= r;
         res[index] = digit[n];
         add_1(index);
     }
-
-    del_1(index);
+    res[index] = digit[number_v];
 
     while (index >= 0) {
         ans[index_ans] = res[index];
