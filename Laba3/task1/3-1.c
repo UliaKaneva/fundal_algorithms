@@ -23,12 +23,9 @@
 
 long long my_abs(long long number) {
     if (number & (1 << 31)) {
-        long long res = 0;
-        for (int i = 1; i != (1 << 31); i <<= 1) {
-            res = (number & i) ? res : res | i;
-        }
-        add_1(res);
-        return res;
+        long long res = number;
+        res = ~res;
+        return res + 1;
     } else { return number; }
 }
 
