@@ -25,7 +25,8 @@ long long my_abs(long long number) {
     if (number & (1 << 31)) {
         long long res = number;
         res = ~res;
-        return res + 1;
+        add_1(res);
+        return res;
     } else { return number; }
 }
 

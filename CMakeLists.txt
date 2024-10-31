@@ -21,3 +21,8 @@ add_executable(laba2.8 "Laba 2/task8/laba2-8.c"
 add_executable(laba3.1 Laba3/task1/laba3-1.c
         Laba3/task1/3-1.h
         Laba3/task1/3-1.c)
+add_executable(laba3.4 Laba3/task4/laba3-4.c
+        Laba3/task4/strings.c
+        Laba3/task4/strings.h
+        Laba3/task4/3-4.c
+        Laba3/task4/3-4.h)
