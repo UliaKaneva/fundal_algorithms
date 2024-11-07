@@ -26,3 +26,8 @@ add_executable(laba3.4 Laba3/task4/laba3-4.c
         Laba3/task4/strings.h
         Laba3/task4/3-4.c
         Laba3/task4/3-4.h)
+
+add_executable(laba3.3 Laba3/task3/laba3-3.c
+        Laba3/task3/3-3.c
+        Laba3/task3/3-3.h
+)

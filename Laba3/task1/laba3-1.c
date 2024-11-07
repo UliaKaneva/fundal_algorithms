@@ -4,7 +4,7 @@
 
 
 int main(void){
-    int a = -120;
+    int a = 65535;
     char ans[34];
     if (ten_to_two(a, 1, ans)){
         printf("Incorrect options\n");
