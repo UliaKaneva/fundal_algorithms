@@ -31,3 +31,11 @@ add_executable(laba3.3 Laba3/task3/laba3-3.c
         Laba3/task3/3-3.c
         Laba3/task3/3-3.h
 )
+add_executable(laba4.1 Laba4/task1/main4-1.c
+        Laba3/task4/strings.h
+        Laba3/task4/strings.c
+        Laba4/task1/hash_table.c
+        Laba4/task1/hash_table.h
+        Laba4/task1/4-1.c
+        Laba4/task1/4-1.h)
+target_link_libraries(laba4.1 m)

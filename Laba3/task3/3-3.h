@@ -34,6 +34,6 @@ typedef enum kOpts {
 
 int GetOpts(int argc, char **argv, kOpts *option, char *names[], int sizes[]);
 
-int add(char **array, int *size, int i, char element);
+int save_add_char(char **array, int *size, int i, char element);
 
 #endif //LAB2_3_3_H

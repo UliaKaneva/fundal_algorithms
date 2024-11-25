@@ -5,7 +5,7 @@
 #include "stdlib.h"
 
 
-int add(char **array, int *size, int i, char element) {
+int save_add_char(char **array, int *size, int i, char element) {
     if (i >= *size) {
         *size *= 2;
         char *temp = (char *) realloc(*array, *size * sizeof(char));
@@ -131,11 +131,11 @@ int GetOpts(int argc, char **argv, kOpts *option, char *names[], int sizes[]) {
     for (int i = 2; i < 4; i++) {
         int j = 0;
         for (j = 0; argv[i][j]; j++) {
-            if (add(&(names[i - 2]), &(sizes[i - 2]), j, argv[i][j])) {
+            if (save_add_char(&(names[i - 2]), &(sizes[i - 2]), j, argv[i][j])) {
                 return 1;
             }
         }
-        if (add(&(names[i - 2]), &(sizes[i - 2]), j, '\0')) { return 1; }
+        if (save_add_char(&(names[i - 2]), &(sizes[i - 2]), j, '\0')) { return 1; }
     }
     return 0;
 }
@@ -183,7 +183,7 @@ int data_reading(FILE *input, emp *ans) {
         int index = 0;
         for (c = (char) fgetc(input); c != ' ' && c != EOF; c = (char) fgetc(input)) {
             if (isalpha(c)) {
-                if (add(&(ptr->name), &size_ptr, index++, c)) {
+                if (save_add_char(&(ptr->name), &size_ptr, index++, c)) {
                     free(ptr->name);
                     free(ptr);
                     return 1;
@@ -194,7 +194,7 @@ int data_reading(FILE *input, emp *ans) {
             }
         }
         if (f) {
-            if (add(&(ptr->name), &size_ptr, index, '\0')) {
+            if (save_add_char(&(ptr->name), &size_ptr, index, '\0')) {
                 free(ptr->name);
                 free(ptr);
                 return 1;
@@ -218,7 +218,7 @@ int data_reading(FILE *input, emp *ans) {
         index = 0;
         for (c = (char) fgetc(input); c != ' ' && c != EOF; c = (char) fgetc(input)) {
             if (isalpha(c)) {
-                if (add(&(ptr->surname), &size_ptr, index++, c)) {
+                if (save_add_char(&(ptr->surname), &size_ptr, index++, c)) {
                     free(ptr->surname);
                     free(ptr->name);
                     free(ptr);
@@ -230,7 +230,7 @@ int data_reading(FILE *input, emp *ans) {
             }
         }
         if (f) {
-            if (add(&(ptr->surname), &size_ptr, index, '\0')) {
+            if (save_add_char(&(ptr->surname), &size_ptr, index, '\0')) {
                 free(ptr->surname);
                 free(ptr->name);
                 free(ptr);
