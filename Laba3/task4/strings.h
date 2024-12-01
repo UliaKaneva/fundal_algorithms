@@ -25,4 +25,8 @@ int concatenation(String *to, String *from);
 
 int add(String *str, char to_add);
 
+int add_number(String *str, int to_add);
+
+int add_chars(String *str, char* to_add);
+
 #endif //LAB2_STRINGS_H

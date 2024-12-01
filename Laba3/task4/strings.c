@@ -183,6 +183,34 @@ int concatenation(String *to, String *from) {
     return 0;
 }
 
+int add_number(String *str, int to_add) {
+    char *abc = "0123456789";
+    char num[15];
+    int number = to_add;
+    int i = 0;
+    while (number >= 10){
+        num[i++] = abc[number % 10];
+        number /= 10;
+    }
+    num[i] = abc[number];
+    for (int j = i; 0 <= j; --j){
+        if (add(str, num[j])){
+            return 1;
+        }
+    }
+    return 0;
+
+}
+
+int add_chars(String *str, char *to_add) {
+    for (int i = 0; to_add[i]; i++){
+        if (add(str, to_add[i])){
+            return 1;
+        }
+    }
+    return 0;
+}
+
 int read_string(FILE *file, String *str, int *is_end){
     if (str == NULL){
         *is_end = 0;
