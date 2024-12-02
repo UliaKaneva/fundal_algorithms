@@ -7,6 +7,8 @@
 #include <stdlib.h>
 
 
+int count_suffiks(int **pi, String *str);
+
 int find_in_own_file(String *substring, String *ans, char *name_file);
 
 int find_in_files(char *substr, char **answer, int *size, int numbers_files, ...);

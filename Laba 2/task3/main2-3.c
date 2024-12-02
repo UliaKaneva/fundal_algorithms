@@ -8,7 +8,7 @@ int main(){
     if (ans == NULL){
         return 1;
     }
-    char str[100] = "n\n\nn";
+    char str[100] = "nana\n";
     if (find_in_files(str, &ans, &size, 2, "test1.txt", "test2.txt")){
         free(ans);
         return 1;
