@@ -39,3 +39,13 @@ add_executable(laba4.1 Laba4/task1/main4-1.c
         Laba4/task1/4-1.c
         Laba4/task1/4-1.h)
 target_link_libraries(laba4.1 m)
+
+add_executable(laba2.3 "Laba 2/task3/2-3.c"
+        "Laba 2/task3/2-3.h"
+        Laba3/task4/strings.h
+        Laba3/task4/strings.c
+        "Laba 2/task3/main2-3.c")
+add_executable(laba2.4 "Laba 2/task4/2-4.c"
+        "Laba 2/task4/2-4.h"
+        "Laba 2/task4/main2-4.c")
+target_link_libraries(laba2.4 m)
