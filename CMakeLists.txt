@@ -49,3 +49,9 @@ add_executable(laba2.4 "Laba 2/task4/2-4.c"
         "Laba 2/task4/2-4.h"
         "Laba 2/task4/main2-4.c")
 target_link_libraries(laba2.4 m)
+add_executable(laba2.9 "Laba 2/task9/main2-9.c"
+        "Laba 2/task9/2-9.h"
+        "Laba 2/task9/2-9.c")
+target_link_libraries(laba2.9 m)
+add_executable(experiment test1.c)
+target_link_libraries(experiment m)
