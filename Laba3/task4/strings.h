@@ -1,6 +1,9 @@
 #ifndef LAB2_STRINGS_H
 #define LAB2_STRINGS_H
 
+#include <stdlib.h>
+#include <stdio.h>
+
 typedef struct String {
     int length;
     char *data;
@@ -23,10 +26,12 @@ void delete(String *str);
 
 int concatenation(String *to, String *from);
 
+int concatenation_char(String *to, char *from);
+
 int add(String *str, char to_add);
 
 int add_number(String *str, int to_add);
 
-int add_chars(String *str, char* to_add);
+int add_chars(String *str, char *to_add);
 
 #endif //LAB2_STRINGS_H

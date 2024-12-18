@@ -1,6 +1,5 @@
 #include "strings.h"
-#include <stdlib.h>
-#include <stdio.h>
+
 
 
 int save_add_char(char **array, int *size, int i, char element) {
@@ -208,6 +207,25 @@ int add_chars(String *str, char *to_add) {
             return 1;
         }
     }
+    return 0;
+}
+
+int concatenation_char(String *to, char *from) {
+    if (!to || !from) {
+        return 1;
+    }
+    if (from[0] == '\0') {
+        return 0;
+    }
+    String *temp_from = create(from);
+    if (temp_from == NULL) {
+        return 1;
+    }
+    if (concatenation(to, temp_from)) {
+        delete(temp_from);
+        return 1;
+    }
+    delete(temp_from);
     return 0;
 }
 
